@@ -1,0 +1,78 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #252323;
+
+}
+
+.top-bar{
+    background: linear-gradient(90deg,#B136C5 0%,#A73030 35%, #B06002 65%, #9F1616 100%); /* Morado-Rojo-Naranja */
+    height: 10vh;
+    /* Distribuir horizontalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.home-btn{
+    margin-left: 2rem;
+    font-family: 'Italiana', serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.home-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.home-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 37%;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg,#8d79e07e 0%, #9167A0 60%, #B85F2C 100%);
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.btn:hover{
+    background: linear-gradient(90deg,#8d79e07e 0%, #9167A0 60%, #B85F2C 100%);
+    transform: scale(1.1);
+    cursor: pointer;
+    
+    
+}
+
+.btn a{
+    font-family: 'Italiana', serif;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn img{
+    max-width: 100%;
+    max-height: 95%;
+    padding: 1rem 0.5rem;
+}
