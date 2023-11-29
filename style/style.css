@@ -211,6 +211,13 @@ p{
     width: 65%;
     text-align: center;
 }
+.horizontal-line{
+    width: 90%;
+    height: 2vh;
+    background: linear-gradient(90deg,#B136C5 0%,#A73030 40%, #B06002 70%, #9F1616 80%);
+    margin: 2rem 0;
+
+}
 
 .linea{
     width: 100%;
