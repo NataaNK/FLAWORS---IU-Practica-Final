@@ -33,16 +33,25 @@ h2{
 }
 h3{
     font-family: 'Italiana', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 1rem;
     font-weight: normal;
     color: white;
     text-decoration: none;
 }
+h4{
+    font-family: 'Italiana', serif;
+    font-size: 3rem;
+    margin: 1rem;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+
+}
 
 p{
     font-family: 'Josefin Sans';
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     margin: 1rem;
     font-weight: normal;
     color: white;
@@ -176,6 +185,8 @@ p{
 /*end of videos and logos*/
 
 /*---------Secciones de home--------- */
+
+
 .section-title-container{
     justify-content: center;
     align-items: center;
@@ -190,6 +201,7 @@ p{
 .text-section{
     display: flex;
     flex-direction: row;
+    padding: 7%;
 }
 .text-container{
     display: flex;
@@ -210,10 +222,13 @@ p{
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;	
+    padding-left: 17%;
+    padding-right: 17%;	
     width: auto;
 }
+
+
+
 
 .country-container{
     display: flex;
@@ -222,7 +237,7 @@ p{
     align-items: center;
 }
 .country-container h3{
-    font-size: 5rem;
+    font-size: 6rem;
     letter-spacing: 0.5rem;
     text-align: center;
     font-weight: normal;
@@ -239,5 +254,36 @@ p{
     background-clip: text;/* añadido por compatibilidad */
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
-    /* TODO: no se como hacer que se mantenga el underline*/
+    /* TODO FIXME: no se como hacer que se mantenga el underline*/
+}
+.dish-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.dish-image{
+    padding: 2%;
+    flex: 1;
+    
+}
+.dish-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dish-description{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    flex: 1;
 }
