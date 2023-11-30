@@ -58,6 +58,9 @@ p{
     text-decoration: none;
 
 }
+img{
+    border-radius: 20px;
+}
 
 /*---------Primera sección (home)---------*/
 
@@ -189,9 +192,9 @@ p{
 
 .section-title-container{
     justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content:start;
     width: 35%;
 }
 .section-title-container h2{
@@ -201,7 +204,9 @@ p{
 .text-section{
     display: flex;
     flex-direction: row;
-    padding: 7%;
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 .text-container{
     display: flex;
@@ -233,9 +238,6 @@ p{
     padding-right: 17%;	
     width: auto;
 }
-
-
-
 
 .country-container{
     display: flex;
@@ -276,7 +278,6 @@ p{
 .dish-image{
     padding: 2%;
     flex: 1;
-    
 }
 .dish-image img{
     width: 100%;
@@ -293,4 +294,57 @@ p{
     width: 50%;
     text-align: center;
     flex: 1;
+}
+
+footer{
+    height: 10vh;
+    background: linear-gradient(90deg,#B136C5 0%,#A73030 40%, #B06002 70%, #9F1616 80%);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+}
+
+
+.footer-refs{
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:left;
+    /* debe ocupar 2 columnas en la primera fila */
+    grid-row: 1;
+    grid-column: span 2; /* Hace que el elemento ocupe dos columnas */
+    justify-content: center;
+    
+}
+.footer-refs a{
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+.footer-img img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#twitter-img{
+    grid-row: 1;
+    grid-column: 3;
+    grid-column: span 1; /* Hace que el elemento ocupe dos columnas */
 }
