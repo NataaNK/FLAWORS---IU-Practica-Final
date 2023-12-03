@@ -348,3 +348,48 @@ footer{
     grid-column: 3;
     grid-column: span 1; /* Hace que el elemento ocupe dos columnas */
 }
+
+/*---------Estilo a-domicilio---------*/
+.background_1{
+    height: 100vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_2{
+    background: linear-gradient(160deg,#B136C5 0%,#A73030 40%, #B06002 70%, #A73030 90%);
+    height: 90vh;
+    width: 85%;
+    border-radius: 10px;
+}
+.centered_stuff{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 280px;
+
+}
+.centered_stuff h2{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input{
+    display: flex;
+    padding: 13px;
+    flex-grow: 1;
+    background-color: #181a1b;
+    border: 1px solid #727272;;    
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
