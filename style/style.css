@@ -353,11 +353,17 @@ footer{
 .background_1{
     height: 100vh;
     width: 100%;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+.background_1 h1{
+    font-size: 3rem;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 .background_2{
@@ -365,17 +371,21 @@ footer{
     height: 90vh;
     width: 85%;
     border-radius: 10px;
+    position: relative;
+
 }
 .centered_stuff{
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 280px;
-
+    align-items: left;
+    top:40%;
+    left: 20%;
+    right: 20%;
 }
-.centered_stuff h2{
-    font-size: 1.4rem;
+.centered_stuff h3{
+    font-size: 2rem;
     font-weight: normal;
     color: white;
     text-decoration: none;
@@ -385,11 +395,51 @@ footer{
 
 .input{
     display: flex;
-    padding: 13px;
-    flex-grow: 1;
+    padding: 18px;
     background-color: #181a1b;
-    border: 1px solid #727272;;    
-    border-radius: 10px;
-    font-size: 13px;
+    opacity: 0.8;
+    border:0;  
+    border-radius: 8px;
+    font-size: 15px;
     text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.input:focus::placeholder{
+    color: transparent;
+}
+.btn2{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    background: #181a1b;
+    border: 3px solid transparent;
+    color: #e8e6e3;
+    transition: all 0s ease;
+    border-radius: 17px;
+    margin-top: 10px;
+    
+}
+
+.btn2 a{
+    font-family: 'Italiana', serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.btn2:hover{
+    background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
+    /* box-shadow: 0 0 10px #951ba8, 0 0 40px #951ba8, 0 0 80px #951ba8; crea un efecto de neon morado bastante guapo*/
+    border: 3px solid #181a1b;
+    cursor: pointer;
+    
+}
+
+#back{
+    position:absolute;
+    top: 82%;
+    bottom: 10%;
+    left: 8%;
 }
