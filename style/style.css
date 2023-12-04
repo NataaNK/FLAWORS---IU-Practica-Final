@@ -358,7 +358,7 @@ footer{
     align-items: center;
 }
 .background_1 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: normal;
     color: white;
     text-decoration: none;
@@ -380,13 +380,13 @@ footer{
     width: 22%;
     margin: 5px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    display: flex;
 }
 
-#logo{
-    margin:3px;
-}
-#logo h2{
+#logo a{
+    text-decoration: none;
+    color: white;
     font-size:3.2rem;
 }
 
@@ -414,6 +414,7 @@ footer{
     padding: 18px;
     margin-bottom: 10px;
     background-color: #181a1b;
+    color: #e8e6e3;
     opacity: 0.8;
     border:0;  
     border-radius: 8px;
@@ -443,7 +444,7 @@ footer{
     font-family: 'Italiana', serif;
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .btn2:hover{
@@ -459,4 +460,32 @@ footer{
     top: 17%;
     left: 6%;
     padding: 10px;
+    width:10%;
+}
+
+/*---------Estilo de error de localización---------*/
+.error-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    max-width: 25%;
+    height: auto;
+}
+
+.error-msg-container{
+    height: 50vh;
+    position: absolute;
+    background: #181a1b;
+    border-radius: 10px;
+    top: 28%;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
