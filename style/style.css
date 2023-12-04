@@ -374,13 +374,29 @@ footer{
     position: relative;
 
 }
+
+.bar{
+    height:8vh;
+    width: 22%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    margin:3px;
+}
+#logo h2{
+    font-size:3.2rem;
+}
+
 .centered_stuff{
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    top:40%;
+    top:30%;
     left: 20%;
     right: 20%;
 }
@@ -396,6 +412,7 @@ footer{
 .input{
     display: flex;
     padding: 18px;
+    margin-bottom: 10px;
     background-color: #181a1b;
     opacity: 0.8;
     border:0;  
@@ -439,7 +456,7 @@ footer{
 
 #back{
     position:absolute;
-    top: 82%;
-    bottom: 10%;
-    left: 8%;
+    top: 17%;
+    left: 6%;
+    padding: 10px;
 }

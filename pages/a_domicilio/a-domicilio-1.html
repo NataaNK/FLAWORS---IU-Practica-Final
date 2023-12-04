@@ -16,18 +16,22 @@
         <section class="background_1">
             <h1 class="title">Pedido a domicilio</h1>
             <div class="background_2">
-                <div class="home-btn" id="page">
-                    <h2 href="index.html">Flawors</h2>
+                <div class="bar">
+                    <div class="home-btn" id="logo">
+                        <h2 href="/index.html">Flawors</h2>
+                    </div>
                 </div>
                 <div class="centered_stuff">
-                    <h3 class="dir" id="direccionInput">Dirección de su domicilio:</h3>
-                    <input class="input" placeholder="Madrid, Calle Tenerife, 50">
-                    <div class="btn2" id="buscarDir">
-                        <a>Buscar</a>
+                    <h3 class="dir">Dirección de su domicilio:</h3>
+                    <input class="input" id="direccionInput" placeholder="Madrid, Calle Tenerife, 50">
+                    <h3 class="posCode">Código postal:</h3>
+                    <input class="input" id="postalCodeInput" placeholder="28013">
+                    <div class="btn2">
+                        <a id="buscarDir" onclick="checkPostalCode()">Buscar</a>
                     </div>
                 </div>
                 <div class="btn2" id="back">
-                    <a href="index.html">Atrás</a>
+                    <a href="/index.html">Atrás</a>
                 </div>
                 
                 
