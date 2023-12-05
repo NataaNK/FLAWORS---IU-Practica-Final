@@ -1,6 +1,7 @@
 
 
 @import url('movil.css');
+@import url('tablet.css');
 
 /*---------Estilo general PC---------*/
 
@@ -297,57 +298,71 @@ img{
 }
 
 footer{
-    height: 10vh;
+    min-height: 10vh;
+    height: fit-content;
     background: linear-gradient(90deg,#B136C5 0%,#A73030 40%, #B06002 70%, #9F1616 80%);
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
+    padding: 10px;
+
 }
 
 
 .footer-refs{
-    padding: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:left;
+    height: auto;
     /* debe ocupar 2 columnas en la primera fila */
     grid-row: 1;
     grid-column: span 2; /* Hace que el elemento ocupe dos columnas */
-    justify-content: center;
     
 }
 .footer-refs a{
-    padding: 2%;
     font-size: 1rem;
-    font-weight: bold;
-    text-decoration: underline;
+    font-weight: normal;
+    text-decoration: none;
     color: white;
+    margin: 0.5rem;
 }
 
 .footer-img{
     justify-content: center;
-    align-items: center;
+    grid-row: 1;
+    height: 15vh;
     display: flex;
+    padding: 2px;
+}
+
+.footer-img img{
     width: 100%;
     height: 100%;
-    display: block;
-
-}
-.footer-img img{
-    width: auto;
-    height: 100%;
     object-fit: contain;
-    padding: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
+    transition: all 0.3s ease;
 }
 
-#twitter-img{
-    grid-row: 1;
-    grid-column: 3;
-    grid-column: span 1; /* Hace que el elemento ocupe dos columnas */
+.footer-img img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
+
+.footer-text{
+    grid-row: 1;
+    grid-column: span 4;
+    justify-content: center;
+}
+.footer-text p{
+    font-family: 'Italiana', serif;
+    font-size: max(1.3rem, 4vh);
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+
 
 /*---------Estilo a-domicilio---------*/
 .background_1{
