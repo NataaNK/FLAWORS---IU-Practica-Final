@@ -518,14 +518,11 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(24, 26, 27, 0.7);
+    background-color: rgba(24, 26, 27, 0.65);
     color:#e8e6e3;
     border-radius: 10px;
-    margin-left:4%;
-    margin-right:4%;
-    padding: 4%;
-    padding-left: 7%;
-    padding-right: 7%;
+    margin: 0 4% 4% 4%;
+    padding: 4% 7% 4% 7%;
 }
 .msgCarta p{
     font-size: 1rem;
@@ -537,4 +534,45 @@ footer{
 }
 .msgCarta a:hover{
     text-decoration: underline;
+}
+.aumentar,
+.disminuir{
+    display: flex;
+    height: 10%;
+    padding: 10px;
+    margin-top:10px;
+    background-color: rgba(24, 26, 27, 0.65);
+    color: #e8e6e3;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    
+}
+.aumentar:hover,
+.disminuir:hover{
+    background-color: #181a1b;
+    border:1px solid #e8e6e3;
+    cursor: pointer;
+}
+
+.cantidad{
+    margin:15px;
+    color: #e8e6e3;
+
+}
+.cantidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px 10px 0px 10px;
+}
+.precios{
+    display:block;
+    color: #e8e6e3;
+    padding-bottom:30px;
+    margin: 0px 10px 0px 0px;
+    overflow:visible
+}
+.total{
+    padding-top: 50px;
 }
