@@ -700,6 +700,32 @@ footer{
         border: 3px solid #181a1b;
         font-size: 1.2rem;
     }
+    footer{
+        min-height: 0vh;
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .footer-refs{
+        flex-direction: row;
+        grid-row: 1;
+        grid-column: span 2;
+        justify-content: space-between;
+    }
+    .footer-refs a{
+        flex-grow: 1;
+    }
+
+    .footer-img{
+        grid-row: 3;
+        height: 10vh;
+    }
+    .footer-img img{
+        height: 10vh;
+    }
+    .footer-text{
+        grid-row: 2;
+    }
     
 
 }
