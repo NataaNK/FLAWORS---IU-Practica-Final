@@ -479,6 +479,7 @@ footer{
     color: transparent;
 }
 .btn2{
+    text-decoration: none;
     display: flex;
     width: 20%;
     justify-content: center;
