@@ -362,7 +362,46 @@ footer{
     text-align: center;
 }
 
+/*---------Estilo FAQ y PP---------*/
 
+.text_container_faq_pp{
+    background: #181a1b;
+    border-radius: 10px;
+    top: 14%;
+    left: 10%;
+    right: 10%;
+    margin: 10%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text_container_faq_pp p{
+    margin: 3%;
+}
+
+.background_2_faq{
+    background: linear-gradient(160deg,#B136C5 0%,#A73030 40%, #B06002 70%, #A73030 90%);
+    width: 85%;
+    height: 90vh;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#back_faq{
+    margin: 0.5%;
+    border-color: #9167A0;
+    top: 17%;
+    bottom: 17%;
+    padding: 20px;
+    width:10%;
+}
 
 /*---------Estilo a-domicilio---------*/
 .background_1{
@@ -378,7 +417,7 @@ footer{
     color: white;
     text-decoration: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 .background_2{
@@ -387,7 +426,6 @@ footer{
     width: 85%;
     border-radius: 10px;
     position: relative;
-
 }
 
 .bar{
@@ -467,7 +505,6 @@ footer{
     /* box-shadow: 0 0 10px #951ba8, 0 0 40px #951ba8, 0 0 80px #951ba8; crea un efecto de neon morado bastante guapo*/
     border: 3px solid #181a1b;
     cursor: pointer;
-    
 }
 
 #back{
