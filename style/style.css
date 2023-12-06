@@ -72,7 +72,7 @@ img{
     position: fixed;
 
     background: linear-gradient(90deg,#B136C5 0%,#A73030 35%, #B06002 65%, #9F1616 100%); /* Morado-Rojo-Naranja */
-    height: 10vh;
+    height: 75px;
     width: 100%;
     /* Distribuir horizontalmente */
     display: flex;
@@ -126,7 +126,7 @@ img{
     
 }
 
-.btn a{
+.btn p{
     font-family: 'Italiana', serif;
     text-decoration: none;
     color: white;
