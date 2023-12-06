@@ -1,7 +1,5 @@
 
 
-@import url('movil.css');
-@import url('tablet.css');
 
 /*---------Estilo general PC---------*/
 
@@ -82,7 +80,7 @@ img{
 }
 
 .home-btn{
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-family: 'Italiana', serif;
     font-size: 3rem;
     font-weight: normal;
@@ -94,13 +92,10 @@ img{
     margin: 0;
     padding: 0;
 }
-
-
 .home-btn:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
-
 
 .buttons-container{
     display: flex;
@@ -160,7 +155,14 @@ img{
     background: linear-gradient(90deg,#B136C5 0%,#A73030 40%, #B06002 70%, #9F1616 80%);
 
 }
-.videos-container video,
+.videos-container video{
+    z-index: 1;
+    width: 50%;
+    height: 100%; /* Ocupar toda la altura de su columna */
+    object-fit: cover; /* Ajustar el contenido para cubrir el contenedor */
+    max-width: 100%;
+}
+
 .videos-container img {
     z-index: 1;
     width: 50%;
@@ -193,7 +195,6 @@ img{
 
 
 .section-title-container{
-    justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content:start;
@@ -268,8 +269,8 @@ img{
     /* TODO FIXME: no se como hacer que se mantenga el underline*/
 }
 .dish-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     width: auto;
@@ -293,10 +294,28 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     text-align: center;
     flex: 1;
 }
+
+.menu-btn-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    padding: 2%;
+
+}
+
+.menu-btn-container .btn2{
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    height: 5vh;
+}
+
 
 footer{
     min-height: 10vh;
@@ -429,6 +448,10 @@ footer{
     position: relative;
 }
 
+.background_2 h1{
+    font-size: 3rem;
+}
+
 .bar{
     height:8vh;
     width: 22%;
@@ -492,7 +515,6 @@ footer{
     transition: all 0s ease;
     border-radius: 17px;
     margin-top: 10px;
-    
 }
 
 .btn2 a{
@@ -510,11 +532,7 @@ footer{
 }
 
 #back{
-    position:absolute;
-    top: 17%;
-    left: 6%;
-    padding: 10px;
-    width:10%;
+    margin:8% 0% 0% 4%;
 }
 
 /*---------Estilo de error de localización---------*/
@@ -545,14 +563,16 @@ footer{
 }
 
 /*---------Estilo de a-domicilio-2---------*/
-.background_3{
-    background: linear-gradient(160deg,#B136C5 0%,#A73030 40%, #B06002 70%, #A73030 90%);
-    height: 150vh;
-    width: 85%;
-    border-radius: 10px;
-    position: relative;
+.txt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
 }
-.filcarta{
+.txt h2{
+    font-size: 1.8rem;
+}
+.menu-selector{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -560,8 +580,13 @@ footer{
     background-color: rgba(24, 26, 27, 0.65);
     color:#e8e6e3;
     border-radius: 10px;
-    margin: 0 4% 4% 4%;
+    margin: 4% 4% 4% 4%;
     padding: 4% 7% 4% 7%;
+}
+.imagenPeru{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
 }
 .msgCarta p{
     font-size: 1rem;
@@ -579,7 +604,6 @@ footer{
     display: flex;
     height: 10%;
     padding: 10px;
-    margin-top:10px;
     background-color: rgba(24, 26, 27, 0.65);
     color: #e8e6e3;
     border-radius: 10px;
@@ -596,7 +620,6 @@ footer{
 .cantidad{
     margin:15px;
     color: #e8e6e3;
-
 }
 .cantidades{
     display: flex;
@@ -614,4 +637,113 @@ footer{
 }
 .total{
     padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+/*---------Estilo de movil---------*/
+
+@media (max-width: 500px) {
+    p {
+        font-size: 1.7rem;
+    }
+
+
+    .buttons-container {
+        visibility: hidden;
+    }
+    .hamburger-menu {
+        /*  FIXME IMPLEMENTAR*/
+        visibility: visible;
+    }
+    .videos-container img{
+        display: none;
+    }
+    .videos-container video {
+        width: 100%;
+    }
+    .text-section{
+        flex-direction: column;
+    }
+    .section-title-container{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .section-title-container img{
+        height: 20vh;
+    }
+    .text-container{
+        width: 100%;
+    }
+    .menu-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .menu-header h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .dish-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .dish-description{
+        grid-row: 1;
+    }
+    .dish-description canvas{
+        display: none;
+    }
+    .dish-image{
+        grid-row: 2;
+    }
+    .menu-btn-container{
+        width: 100%;
+        grid-template-columns: max-content;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+
+    .btn2{
+        height: 5vh;
+        width: 100%;
+        background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
+        border: 3px solid #181a1b;
+        font-size: 1.2rem;
+    }
+    footer{
+        min-height: 0vh;
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .footer-refs{
+        flex-direction: row;
+        grid-row: 1;
+        grid-column: span 2;
+        justify-content: space-between;
+    }
+    .footer-refs a{
+        flex-grow: 1;
+    }
+
+    .footer-img{
+        grid-row: 3;
+        height: 10vh;
+    }
+    .footer-img img{
+        height: 10vh;
+    }
+    .footer-text{
+        grid-row: 2;
+    }
+    
+
 }
