@@ -314,9 +314,9 @@ img{
 }
 
 .menu-btn-container .btn2{
-    width: 50%;
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    height: 5vh;
 }
 
 
@@ -697,16 +697,21 @@ footer{
     .dish-description{
         grid-row: 1;
     }
+    .dish-description canvas{
+        display: none;
+    }
     .dish-image{
         grid-row: 2;
     }
     .menu-btn-container{
         width: 100%;
+        grid-template-columns: max-content;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
     }
 
     .btn2{
-        width: fit-content;
-        height: 3vh;
+        height: 5vh;
+        width: 100%;
         background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
         border: 3px solid #181a1b;
         font-size: 1.2rem;
