@@ -1,3 +1,9 @@
 @media (max-width: 1200px) {
-    
+    .buttons-container {
+        visibility: hidden;
+    }
+    .hamburger-menu {
+        /*  FIXME IMPLEMENTAR*/
+        visibility: visible;
+    }
 }

@@ -1,7 +1,5 @@
 
 
-@import url('movil.css');
-@import url('tablet.css');
 
 /*---------Estilo general PC---------*/
 
@@ -160,7 +158,14 @@ img{
     background: linear-gradient(90deg,#B136C5 0%,#A73030 40%, #B06002 70%, #9F1616 80%);
 
 }
-.videos-container video,
+.videos-container video{
+    z-index: 1;
+    width: 50%;
+    height: 100%; /* Ocupar toda la altura de su columna */
+    object-fit: cover; /* Ajustar el contenido para cubrir el contenedor */
+    max-width: 100%;
+}
+
 .videos-container img {
     z-index: 1;
     width: 50%;
@@ -193,7 +198,6 @@ img{
 
 
 .section-title-container{
-    justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content:start;
@@ -268,8 +272,8 @@ img{
     /* TODO FIXME: no se como hacer que se mantenga el underline*/
 }
 .dish-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     width: auto;
@@ -293,10 +297,22 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     text-align: center;
     flex: 1;
 }
+
+.menu-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 2%;
+
+}
+
+
 
 footer{
     min-height: 10vh;
@@ -492,7 +508,6 @@ footer{
     transition: all 0s ease;
     border-radius: 17px;
     margin-top: 10px;
-    
 }
 
 .btn2 a{
@@ -614,4 +629,77 @@ footer{
 }
 .total{
     padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+/*---------Estilo de movil---------*/
+
+@media (max-width: 500px) {
+    .buttons-container {
+        visibility: hidden;
+    }
+    .hamburger-menu {
+        /*  FIXME IMPLEMENTAR*/
+        visibility: visible;
+    }
+    .videos-container img{
+        display: none;
+    }
+    .videos-container video {
+        width: 100%;
+    }
+    .text-section{
+        flex-direction: column;
+    }
+    .section-title-container{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .section-title-container img{
+        height: 20vh;
+    }
+    .text-container{
+        width: 100%;
+    }
+    .menu-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .menu-header h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .dish-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .dish-description{
+        grid-row: 1;
+    }
+    .dish-image{
+        grid-row: 2;
+    }
+    .menu-btn-container{
+        width: 100%;
+    }
+
+    .btn2{
+        width: fit-content;
+        height: 3vh;
+        background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
+        border: 3px solid #181a1b;
+        font-size: 1.2rem;
+    }
+    
+
 }
