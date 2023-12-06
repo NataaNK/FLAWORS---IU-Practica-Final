@@ -303,15 +303,21 @@ img{
 }
 
 .menu-btn-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    justify-items: center;
     align-items: center;
     width: auto;
     padding: 2%;
 
 }
 
+.menu-btn-container .btn2{
+    width: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
 
 
 footer{
@@ -642,6 +648,11 @@ footer{
 /*---------Estilo de movil---------*/
 
 @media (max-width: 500px) {
+    p {
+        font-size: 1.7rem;
+    }
+
+
     .buttons-container {
         visibility: hidden;
     }
