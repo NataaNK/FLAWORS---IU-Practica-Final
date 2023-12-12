@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Flawors</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/tablet.css">
+    <script src="script/script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
     <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32" />
@@ -20,12 +22,26 @@
                 <a class = "home-btn">
                     <h1 href="index.html">Flawors</h1>
                 </a>
+
+                <section id="menu_de_hamburguesa_container">
+                    <div class='menu_de_hamburguesa'>
+                        <div class='opciones_menu pointerCursor hide'>
+                            <div class='option' id='option1'>A Domicilio</div>
+                            <div class='option' id='option2'>Reservar</div>
+                        </div>
+
+                        <div class='title pointerCursor'>
+                            <img src="media/img/menu_hamb_icon.png" alt="menu deslegable icon">
+                        </div>
+                    </div>
+                </section>
+
                 <div class = buttons-container>
-                    <a class = btn href="pages/a_domicilio/a-domicilio-1.html">
+                    <a class = btn id="btn_domicilio" href="pages/a_domicilio/a-domicilio-1.html">
                         <img src="media/img/a-domicilio.png" alt="a domicilio icon">
                         <p class = btn-text href="pages/a_domicilio/a-domicilio-1.html">A Domicilio</p>
                     </a>
-                    <a class = btn href="pages/reserva/reserva-1.html">
+                    <a class = btn id="btn_reserva" href="pages/reserva/reserva-1.html">
                         <img src="media/img/reserva.png" alt="reserva icon">
                         <p class = btn-text href="pages/reserva/reserva-1.html">Reservar</p>
                     </a>

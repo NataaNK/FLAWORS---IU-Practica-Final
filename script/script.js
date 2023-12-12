@@ -1,10 +1,9 @@
 
 const codPostal = 28013  // codigo postal del restaurante
-
 const currentPage = window.location.pathname.split('/').pop();
 
-document.addEventListener("DOMContentLoaded", function (event) {
 
+document.addEventListener("DOMContentLoaded", function (event) {
 
     if (currentPage == "a-domicilio-1.html") {
         document.getElementById("buscarDir").addEventListener("click", function() {
@@ -60,4 +59,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+    if (currentPage == "index.html"){
+        // Menú de hamburguesa
+        const dropdownTitle = document.querySelector('.menu_de_hamburguesa .title');
+        const dropdownOptions = document.querySelectorAll('.menu_de_hamburguesa .option');
+
+        // Vincula listeners al menú de hamburguesa
+        dropdownTitle.addEventListener('click', toggleMenuDisplay);
+        dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected)); 
+    }
+    
 });
+
+
+// Desplegar menu de hamburguesa
+function toggleClass(elem,className){
+	if (elem.className.indexOf(className) !== -1){
+		elem.className = elem.className.replace(className,'');     
+	}
+	else{
+		elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+	}
+	return elem;
+}
+
+function toggleDisplay(elem){
+	const curDisplayStyle = elem.style.display;			
+				
+	if (curDisplayStyle === 'none' || curDisplayStyle === ''){
+		elem.style.display = 'block';
+	}
+	else{
+		elem.style.display = 'none';
+	}
+}
+
+
+function toggleMenuDisplay(e){
+	const dropdown = e.currentTarget.parentNode;
+	const menu = dropdown.querySelector('.opciones_menu');
+
+	toggleClass(menu,'hide');
+}
+
+function handleOptionSelected(e){
+	toggleClass(e.target.parentNode, 'hide');			
+
+    // Simulamos un click en el menú de ordenador para poder
+    // reutilizar el comportamiento
+    if(e.target.textContent == "A Domicilio"){
+        btn_domicilio.click();
+    }
+    else if(e.target.textContent == "Reservar"){
+        btn_reserva.click();
+    }
+}

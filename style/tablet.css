@@ -1,9 +1,83 @@
-@media (max-width: 1200px) {
-    .buttons-container {
-        visibility: hidden;
+@media screen and (max-width: 768px) {
+
+    .buttons-container
+    {
+       display: none;
     }
-    .hamburger-menu {
-        /*  FIXME IMPLEMENTAR*/
-        visibility: visible;
+
+    #menu_de_hamburguesa_container{
+        height: fit-content;
+        width: 100%;
+        position: fixed;
+        display: flex !important;
+        align-items: center;
+        justify-content: right;
+        z-index: 10;
+    }
+
+    #menu_de_hamburguesa_container img{
+        height: 7vh;
+        width: 7vh;
+    }
+
+    .menu_de_hamburguesa{
+        width: fit-content;
+        display: flex;
+        font-family: 'carlmarx';   
+        font-size: 100%;
+        margin: 0%;
+        border-radius: 20px;
+        height: 100%;
+    }
+
+    .hide {
+        max-height: 0 !important;
+    }
+
+    .menu_de_hamburguesa .title{
+        margin: .3em .3em .3em .3em;	
+        width: 100%;
+        font-size: 4vw;
+    }
+    
+    .menu_de_hamburguesa .opciones_menu{
+        transition: max-height .5s ease-out;
+        max-height: 20em;
+        overflow: hidden;
+    }
+    
+    .menu_de_hamburguesa .opciones_menu .option{
+        font-size: 3.5vw;
+        color:#000000;
+    }
+    
+    .menu_de_hamburguesa .opciones_menu .option:hover{
+        background: rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+
+    .pointerCursor:hover{
+        cursor: pointer;
+    }
+    
+    .rotate-90{
+        transform: rotate(90deg);
+    }
+
+    #menu_icon_container{
+        width: fit-content;
+        margin: 1%;
+        margin-top: 2%;
+    }
+    
+    #img_icon_menu {
+        width: 3.5vw;
+        max-width: 100%;
+        cursor: pointer;
+    }
+
+    #img_icon_menu:hover {
+        border-radius: 10px;
+        background-color:#ebc0a8;
     }
 }

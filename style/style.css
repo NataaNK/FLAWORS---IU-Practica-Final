@@ -1,9 +1,6 @@
 
 
-
 /*---------Estilo general PC---------*/
-
-
 body{
     margin: 0;
     padding: 0;
@@ -12,8 +9,6 @@ body{
     background: #252323;
 
 }
-
-
 
 h1 {
     font-family: 'Italiana', serif;
@@ -61,6 +56,7 @@ img{
     border-radius: 20px;
 }
 
+
 /*---------Primera sección (home)---------*/
 
 /*Nav bar*/
@@ -68,7 +64,6 @@ img{
     /* para que el filtro de fondo se vea por encima de los elementos */ 
     z-index: 7;
     position: fixed;
-
     background: linear-gradient(90deg,#B136C5 0%,#A73030 35%, #B06002 65%, #9F1616 100%); /* Morado-Rojo-Naranja */
     height: 75px;
     width: 100%;
@@ -91,10 +86,15 @@ img{
 .home-btn h1{
     margin: 0;
     padding: 0;
+    font-size: min(100%, 10vw);
 }
 .home-btn:hover{
     transform: scale(1.1);
     cursor: pointer;
+}
+
+#menu_de_hamburguesa_container{
+    display: none;
 }
 
 .buttons-container{
@@ -104,6 +104,7 @@ img{
     height: 100%;
     width: auto;
 }
+
 
 .btn{
     display: flex;
