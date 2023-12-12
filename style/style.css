@@ -662,6 +662,8 @@ footer{
     transition: all 0.3s ease;
 }
 
+/*---------Estilo de pago---------*/
+
 .payment-form{
     margin: 0px 36px 0px 0px;
     flex:1;
@@ -715,6 +717,31 @@ footer{
 }
 
 #pagar{
+    margin-left: 4%;
+}
+
+/*---------Estilo de reserva-1---------*/
+.fecha-hora{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px 36px 0px 0px;
+}
+
+.fecha{
+    margin: 0px 30px 0px 0px;
+    flex: 1;
+}
+
+.hora{
+    margin: 0px 0px 0px 30px;
+    flex: 1;
+}
+
+#confirmar-reserva{
     margin-left: 4%;
 }
 

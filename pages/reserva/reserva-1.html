@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido a domicilio</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/tablet.css">
+    <script src="../../script/script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <main>
+        <section class="background_1">
+            <h1 class="title">Reserva</h1>
+            <div class="background_2">
+                <div class="bar">
+                    <a class ="home-btn" href="../../index.html">
+                        <h1>Flawors</h1>
+                    </a>
+                </div>
+                <a class="btn2" id="back" href="a-domicilio-2.html">Atrás</a>
+                <div class="txt">
+                    <h2>Seleccione la fecha y hora</h2>
+                </div>
+                <div class="main-displayer">
+                    <div class="fecha-hora">
+                        <div class="fecha">
+                            <label for="fecha">Fecha</label>
+                            <input class="input" type="text" id="calendario" placeholder="Fecha">
+                        </div>
+                        <div class="hora">
+                            <label for="hora">Hora</label>
+                            <input class="input" type="text" id="hora" placeholder="Hora">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn2" id="confirmar-reserva" disabled>Confirmar reserva</button>

@@ -69,6 +69,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
         dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected)); 
     }
     
+    if (currentPage == "reserva-1.html") {
+        flatpickr("#calendario", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+        });
+
+        flatpickr("#hora", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            minuteIncrement: 15,
+        });
+    }
 });
 
 
