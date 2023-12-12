@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     if (currentPage == "index.html"){
-        // Menú de hamburguesa
+        // Menú de hamburguesaº
         const dropdownTitle = document.querySelector('.menu_de_hamburguesa .title');
         const dropdownOptions = document.querySelectorAll('.menu_de_hamburguesa .option');
 
