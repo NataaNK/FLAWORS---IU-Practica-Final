@@ -28,17 +28,37 @@
                     <h2>Pago con tarjeta</h2>
                 </div>
                 <div class="main-displayer">
-                    <div class="nombre-numero">
-                        <div class="nombre">
-                            <label for="nombre">Nombre</label>
-                            <input class="input" type="text" id="nombre" placeholder="Nombre del titular">
+                    <form class="payment-form">
+                        <div class="nombre-numero">
+                            <div class="nombre">
+                                <label for="nombre">Nombre</label>
+                                <input class="input" type="text" id="nombre" placeholder="Nombre del titular">
+                            </div>
+                            <div class="numero">
+                                <label for="numero">Número de tarjeta</label>
+                                <input class="input" type="text" id="numero" placeholder="Número de tarjeta">
+                            </div>
                         </div>
-                        <div class="numero">
-                            <label for="numero">Número de tarjeta</label>
-                            <input class="input" type="text" id="numero" placeholder="Número de tarjeta">
+                        <div class="fecha-cvv">
+                            <div class="mes">
+                                <label for="fecha">Mes de expiración</label>
+                                <input class="input" type="text" id="fecha" placeholder="MM">
+                            </div>
+                            <div class="año">
+                                <label for="año">Año de expiración</label>
+                                <input class="input" type="text" id="cvv" placeholder="AA">
+                            </div>
                         </div>
-                    </div>
+                        <div class="cvv-container">
+                            <div class="cvv">
+                                <label for="cvv">CVV</label>
+                                <input class="input" type="text" id="cvv" placeholder="CVV">
+                            </div>
+                            <img src="../../media/img/cvv.png" alt="cvv">
+                        </div>
+                    </form>
                 </div>
+                <button class="btn2" id="pagar" href="a-domicilio-1.html" disabled>Pagar</button>
         </section>
     </main>
 </body>

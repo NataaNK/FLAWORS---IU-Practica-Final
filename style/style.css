@@ -489,6 +489,7 @@ footer{
 
 .input{
     display: flex;
+    width: 100%;
     padding: 18px;
     margin-bottom: 10px;
     background-color: #181a1b;
@@ -505,6 +506,8 @@ footer{
 }
 .btn2{
     text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
     display: flex;
     width: 20%;
     justify-content: center;
@@ -519,12 +522,6 @@ footer{
     margin-top: 10px;
 }
 
-.btn2 a{
-    font-family: 'Italiana', serif;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-}
 
 .btn2:hover{
     background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
@@ -572,10 +569,10 @@ footer{
     font-size: 1.8rem;
     margin:0;
 }
-.menu-selector{
+.main-displayer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgba(24, 26, 27, 0.65);
     color:#e8e6e3;
@@ -587,6 +584,10 @@ footer{
     width: 20%;
     height: auto;
     border-radius: 10px;
+}
+
+.msgCarta{
+    margin-left: 7%;
 }
 .msgCarta p{
     font-size: 1rem;
@@ -661,6 +662,61 @@ footer{
     transition: all 0.3s ease;
 }
 
+.payment-form{
+    margin: 0px 36px 0px 0px;
+    flex:1;
+}
+
+.nombre-numero{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fecha-cvv{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nombre,
+.mes{
+    margin: 0px 30px 0px 0px;
+    flex: 1;
+}
+
+.numero,
+.año{
+    margin: 0px 0px 0px 30px;
+    flex: 1;
+}
+.cvv-container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+
+}
+.cvv-container img{
+    border-radius: 0px;
+    margin-top: 10px;
+
+}
+.cvv{
+    display: inline-block;
+    max-width: 60px;
+}
+
+#pagar{
+    margin-left: 4%;
+}
 
 
 
