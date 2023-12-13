@@ -25,6 +25,9 @@ function setCurrentLanguageSelection(current_lang) {
   var gt = window.gtranslateSettings || {};
   gt = gt[document.currentScript.getAttribute("data-gt-widget-id")] || gt;
   var lang_array_english = {
+    es: "Spanish",
+    en: "English",
+    ca: "Catalan",
     af: "Afrikaans",
     sq: "Albanian",
     am: "Amharic",
@@ -36,7 +39,7 @@ function setCurrentLanguageSelection(current_lang) {
     bn: "Bengali",
     bs: "Bosnian",
     bg: "Bulgarian",
-    ca: "Catalan",
+    
     ceb: "Cebuano",
     ny: "Chichewa",
     "zh-CN": "Chinese (Simplified)",
@@ -46,7 +49,6 @@ function setCurrentLanguageSelection(current_lang) {
     cs: "Czech",
     da: "Danish",
     nl: "Dutch",
-    en: "English",
     eo: "Esperanto",
     et: "Estonian",
     tl: "Filipino",
@@ -111,7 +113,6 @@ function setCurrentLanguageSelection(current_lang) {
     sk: "Slovak",
     sl: "Slovenian",
     so: "Somali",
-    es: "Spanish",
     su: "Sundanese",
     sw: "Swahili",
     sv: "Swedish",
