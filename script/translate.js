@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function setCurrentLanguageSelection(current_lang) {
-  console.log("cambiando idioma a " + current_lang);
   gt_options = document.querySelectorAll(".gt_option");
   for (var i = 0; i < gt_options.length; i++) {
     gt_option = gt_options[i];
@@ -613,9 +612,6 @@ function setCurrentLanguageSelection(current_lang) {
       });
   }
   function gt_update_slider_language(el) {
-    console.log(
-      "cambiando idioma en slider a " + el.getAttribute("data-gt-lang")
-    );
     el.parentNode.parentNode.querySelector("div.gt_selected a").innerHTML =
       el.innerHTML;
     setTimeout(function () {
@@ -652,9 +648,6 @@ function setCurrentLanguageSelection(current_lang) {
         if (url_structure == "none") {
           evt.preventDefault();
           localStorage.setItem("idioma", e.getAttribute("data-gt-lang"));
-          console.log(
-            "cambiando idioma en click a " + e.getAttribute("data-gt-lang")
-          );
           if (e.getAttribute("data-gt-lang") == default_language) {
             location.reload();
           } else {

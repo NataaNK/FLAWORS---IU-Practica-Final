@@ -328,7 +328,6 @@ img{
 
 .menu-btn-container .btn2{
     grid-row: 2;
-
     font-size: 1.5rem;
     transition: all 0.3s ease;
     height: 5vh;

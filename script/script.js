@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (postalCode == codPostal) {
                 window.location.href = "a-domicilio-2.html";
             } else {
-                window.location.href = "error.html";
+                window.location.href = "error-a-domicilio.html";
             }
         
         });
@@ -99,45 +99,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         // Click en confirmar
         const btn_confirmar = document.getElementById('confirmar-reserva');
-        btn_confirmar.addEventListener('click', () => {
-            // Obtener hora
-            const hora = document.getElementById('hora').value;
-            // Obtener día
-            const dia = document.getElementById('calendario').value;
-            // A las 10 reservas en una misma hora -> está lleno
-            console.log(cookiesOperations.getItem(hora));
-            // Si no, lo añadimos a la lista de reservas
-            cookiesOperations.setItem(dia, hora);
-        });
+        btn_confirmar.addEventListener('click', confirmarReserva);
     }
 });
 
 
 
-// Tratamiento de las cookies
-const cookiesOperations = {
-    listOfCookies: {},
+// Variable para almacenar las reservas
+var reservas = [];
 
-    init(){
-        this.listOfCookies = Object.fromEntries(document.cookie.split(";").map(co => co.split("=")));
-    },
+// Función para manejar el evento de confirmar reserva
+function confirmarReserva() {
+    // Obtener los valores de fecha y hora seleccionados
+    var fecha = document.getElementById('calendario').value;
+    var hora = document.getElementById('hora').value;
 
-    setItem(key, value){
-        this.listOfCookies[key] = value;
-        let str = '${key}=${value}';
-        document.cookie = str;
-    },
+    // Verificar si ya hay 10 reservas para esa fecha y hora
+    if (existeLimiteReservas(fecha, hora)) {
+        window.location.href = "error-reserva.html";
+    } else {
+        // Agregar la reserva a la lista
+        reservas.push({ fecha: fecha, hora: hora });
 
-    getItem(key) {
-        return this.listOfCookies[key];
-    },
-    
-    remove(key) {
-        delete this.listOfCookies[key];
-        document.cookie = '${key}=null;expires=${new Date(0)}';
-    },
+        // Mensaje de éxito
+        window.location.href = "reserva-exito.html";
+    }
 }
 
+// Función para verificar si ya hay 10 reservas para una fecha y hora específicas
+function existeLimiteReservas(fecha, hora) {
+    var contadorReservas = 0;
+
+    // Recorrer la lista de reservas y contar las que coinciden con la fecha y hora
+    for (var i = 0; i < reservas.length; i++) {
+        if (reservas[i].fecha === fecha && reservas[i].hora === hora) {
+            contadorReservas++;
+        }
+    }
+
+    // Verificar si se supera el límite de 10 reservas
+    return contadorReservas >= 10;
+}
 
 // Desplegar menu de hamburguesa
 function toggleClass(elem,className){
@@ -216,7 +218,6 @@ window.gtranslateSettings = {
 
 // Cambiar el idioma y almacenarlo en localStorage
 function cambiarIdiomaNuevo(idioma) {
-    console.log("cambiando idioma en recarga de pagina a " + idioma);
   localStorage.setItem('idioma', idioma);
   // Actualizar la traducción después de cambiar el idioma
   doGTranslate('es|' + idioma);
