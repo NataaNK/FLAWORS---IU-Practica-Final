@@ -244,6 +244,10 @@ img{
     width: auto;
 }
 
+.menu-section h2{
+    text-align: center;
+}
+
 .country-container{
     display: flex;
     flex-direction: column;
@@ -514,21 +518,23 @@ footer{
     align-items: center;
     text-align: center;
     padding: 13px;
-    background: #181a1b;
-    border: 3px solid transparent;
+    background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
     color: #e8e6e3;
     transition: all 0s ease;
     border-radius: 17px;
     margin-top: 10px;
 }
 
-
 .btn2:hover{
-    background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
+    background: #181a1b;
     /* box-shadow: 0 0 10px #951ba8, 0 0 40px #951ba8, 0 0 80px #951ba8; crea un efecto de neon morado bastante guapo*/
-    border: 3px solid #181a1b;
+    border: 3px linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
     cursor: pointer;
 }
+
+ .menu-btn-container .btn2{
+    width: 70%;
+ }
 
 #back{
     margin:2% 0% 2% 2%;
