@@ -1,5 +1,17 @@
 @media screen and (max-width: 768px) {
 
+    h2{
+        font-size: 8.8vw;
+    }
+
+    .menu-section h2{
+        text-align: center;
+    }
+
+    .section-title-container h2{
+        font-size: 7vw;
+    }
+
     .buttons-container
     {
        display: none;
@@ -51,7 +63,6 @@
         overflow: hidden;
         top: 75px
     }
-
     
     .menu_de_hamburguesa .opciones_menu .option{
         font-size: 5vw;
