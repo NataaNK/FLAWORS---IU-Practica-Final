@@ -3,6 +3,10 @@ const codPostal = 28013  // codigo postal del restaurante
 const currentPage = window.location.pathname.split('/').pop();
 
 document.addEventListener("DOMContentLoaded", function (event) {
+    load_tlib();
+    
+    cambiarIdiomaNuevo(idiomaSeleccionado);
+    
 
     if (currentPage == "a-domicilio-1.html") {
         document.getElementById("buscarDir").addEventListener("click", function() {
@@ -188,3 +192,41 @@ function showActualWeek(e) {
     var actualWeek = document.getElementById("actual-week");
     actualWeek.style.display = "block";
 }
+
+
+/*TRADUCCION*/
+// Recuperar el idioma almacenado en localStorage o usar el idioma predeterminado
+let idiomaSeleccionado = localStorage.getItem('idioma') || "es";
+// Configuración de gtranslate
+window.gtranslateSettings = {
+  "default_language": idiomaSeleccionado,
+  "detect_browser_language": true,
+  "wrapper_selector": ".gtranslate_wrapper",
+  "switcher_horizontal_position": "right",
+  "switcher_text_color": "#f7f7f7",
+  "switcher_arrow_color": "#f2f2f2",
+  "switcher_border_color": "#161616",
+  "switcher_background_color": "#303030",
+  "switcher_background_shadow_color": "#474747",
+  "switcher_background_hover_color": "#3a3a3a",
+  "dropdown_text_color": "#eaeaea",
+  "dropdown_hover_color": "#748393",
+  "dropdown_background_color": "#474747"
+};
+
+// Cambiar el idioma y almacenarlo en localStorage
+function cambiarIdiomaNuevo(idioma) {
+    console.log("cambiando idioma en recarga de pagina a " + idioma);
+  localStorage.setItem('idioma', idioma);
+  // Actualizar la traducción después de cambiar el idioma
+  doGTranslate('es|' + idioma);
+}
+
+function load_tlib() {
+    if (!window.gt_translate_script) {
+      window.gt_translate_script = document.createElement("script");
+      gt_translate_script.src =
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2";
+      document.body.appendChild(gt_translate_script);
+    }
+  }
