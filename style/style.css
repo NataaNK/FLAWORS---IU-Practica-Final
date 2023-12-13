@@ -342,7 +342,6 @@ footer{
 .footer-refs a{
     font-size: max(1.3rem, 4vh);
     font-weight: normal;
-    text-decoration: none;
     color: white;
     margin: 0.5rem;
 }
