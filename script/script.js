@@ -60,12 +60,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     if (currentPage == "index.html"){
-        // Menú de hamburguesaº
-        const dropdownTitle = document.querySelector('.menu_de_hamburguesa .title');
+        // Menú de hamburguesa
+        const dropdownIcon = document.querySelector('.menu_de_hamburguesa .title');
         const dropdownOptions = document.querySelectorAll('.menu_de_hamburguesa .option');
 
         // Vincula listeners al menú de hamburguesa
-        dropdownTitle.addEventListener('click', toggleMenuDisplay);
+        dropdownIcon.addEventListener('click', toggleMenuDisplay);
         dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected)); 
     }
     
