@@ -11,4 +11,8 @@
     .menu_de_hamburguesa .opciones_menu .option{
         font-size: 8vw;
     }
+
+    .dish-image img{
+        max-width: 45vw; 
+    }
 }
