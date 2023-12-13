@@ -2,7 +2,6 @@
 const codPostal = 28013  // codigo postal del restaurante
 const currentPage = window.location.pathname.split('/').pop();
 
-
 document.addEventListener("DOMContentLoaded", function (event) {
 
     if (currentPage == "a-domicilio-1.html") {
@@ -73,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         flatpickr("#calendario", {
             dateFormat: "Y-m-d",
             minDate: "today",
+            "locale": "es",
         });
 
         flatpickr("#hora", {
