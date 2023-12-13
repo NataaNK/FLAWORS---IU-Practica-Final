@@ -81,9 +81,52 @@ document.addEventListener("DOMContentLoaded", function (event) {
             dateFormat: "H:i",
             time_24hr: true,
             minuteIncrement: 15,
+            minTime: "13:00",
+            maxTime: "23:00",
+        });
+
+        // Click en confirmar
+        const btn_confirmar = document.getElementById('confirmar-reserva');
+        btn_confirmar.addEventListener('click', () => {
+            // Obtener hora
+            const hora = document.getElementById('hora').value;
+            // Obtener día
+            const dia = document.getElementById('calendario').value;
+            // A las 10 reservas en una misma hora -> está lleno
+            console.log(cookiesOperations.getItem(hora));
+            // Si no, lo añadimos a la lista de reservas
+            cookiesOperations.setItem(hora, dia, Date(0));
         });
     }
 });
+
+
+
+// Tratamiento de las cookies
+const cookiesOperations = {
+    listOfCookies: {},
+
+    init(){
+        this.listOfCookies = Object.fromEntries(document.cookie.split(";").map(co => co.split("=")));
+    },
+
+    setItem(key, value, maxAge){
+        this.listOfCookies[key] = value;
+        let str = '${key}=${value}';
+        if (maxAge)
+            str += ';max-age=${maxAge}'
+        document.cookie = str;
+    },
+
+    getItem(key) {
+        return this.listOfCookies[key];
+    },
+    
+    remove(key) {
+        delete this.listOfCookies[key];
+        document.cookie = '${key}=null;expires=${new Date(0)}';
+    },
+}
 
 
 // Desplegar menu de hamburguesa
