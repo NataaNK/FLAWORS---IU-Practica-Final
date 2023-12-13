@@ -105,14 +105,14 @@ function toggleMenuDisplay(e){
 }
 
 function handleOptionSelected(e){
-	toggleClass(e.target.parentNode, 'hide');			
+	toggleClass(e.target.parentNode, 'hide');	
 
     // Simulamos un click en el menú de ordenador para poder
     // reutilizar el comportamiento
-    if(e.target.textContent == "A Domicilio"){
+    if(e.target.textContent.trim() == "A Domicilio"){
         btn_domicilio.click();
     }
-    else if(e.target.textContent == "Reservar"){
+    else if(e.target.textContent.trim() == "Reservar"){
         btn_reserva.click();
     }
 }

@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px) {
+        
+    .menu_de_hamburguesa .opciones_menu{
+        width: 75%;
+    }
+
+    .menu_de_hamburguesa .opciones_menu .option{
+        font-size: 8vw;
+    }
+}

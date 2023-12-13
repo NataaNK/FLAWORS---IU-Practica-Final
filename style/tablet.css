@@ -51,12 +51,14 @@
         overflow: hidden;
         top: 75px
     }
+
     
     .menu_de_hamburguesa .opciones_menu .option{
         font-size: 5vw;
         color:#000000;
         background: linear-gradient(90deg,#B136C5 0%,#A73030 35%, #B06002 65%, #9F1616 100%); /* Morado-Rojo-Naranja */
         border: 3px solid white;
+        margin: 1%;
     }
     
     .menu_de_hamburguesa .opciones_menu .option:hover{
@@ -66,5 +68,15 @@
 
     .pointerCursor:hover{
         cursor: pointer;
+    }
+
+    #option1 img,
+    #option2 img{
+        padding-left: 1vh;
+        padding-top: 1vh;
+        margin-right: 2vh;
+        height: 7vw;
+        width: 7vw;
+        border-radius: 0px;
     }
 }
