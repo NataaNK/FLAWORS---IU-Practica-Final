@@ -109,7 +109,7 @@ function handleOptionSelected(e){
 
     // Simulamos un click en el menú de ordenador para poder
     // reutilizar el comportamiento
-    if(e.target.textContent.trim() == "A Domicilio"){
+    if(e.target.textContent.trim() == "Pedido"){
         btn_domicilio.click();
     }
     else if(e.target.textContent.trim() == "Reservar"){
