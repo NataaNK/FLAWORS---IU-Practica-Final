@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // A las 10 reservas en una misma hora -> está lleno
             console.log(cookiesOperations.getItem(hora));
             // Si no, lo añadimos a la lista de reservas
-            cookiesOperations.setItem(hora, dia, Date(0));
+            cookiesOperations.setItem(dia, hora);
         });
     }
 });
@@ -110,11 +110,9 @@ const cookiesOperations = {
         this.listOfCookies = Object.fromEntries(document.cookie.split(";").map(co => co.split("=")));
     },
 
-    setItem(key, value, maxAge){
+    setItem(key, value){
         this.listOfCookies[key] = value;
         let str = '${key}=${value}';
-        if (maxAge)
-            str += ';max-age=${maxAge}'
         document.cookie = str;
     },
 
