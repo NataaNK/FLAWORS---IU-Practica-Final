@@ -234,6 +234,11 @@ img{
 }
 
 /*---------Sección de Menu diario--------- */
+
+#previous-week, #next-week {
+    display: none;
+}
+
 .menu-header{
     display: flex;
     flex-direction: row;
@@ -322,6 +327,8 @@ img{
 }
 
 .menu-btn-container .btn2{
+    grid-row: 2;
+
     font-size: 1.5rem;
     transition: all 0.3s ease;
     height: 5vh;
@@ -537,8 +544,17 @@ footer{
     cursor: pointer;
 }
 
-.menu-btn-container .btn_otros_menus{
+.menu-btn-container .btn_otros_menus, .boton_volver_semana_actual{
     color: #e8e6e3;
+    text-decoration: underline;
+    font-size: 1.2rem;
+ }
+ .boton_volver_semana_actual{
+    grid-column: span 2;
+ }
+
+ .menu-btn-container .btn_otros_menus:hover, .boton_volver_semana_actual:hover{
+    cursor: pointer;
  }
 
  .menu-btn-container .btn2{

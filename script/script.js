@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // Vincula listeners al menú de hamburguesa
         dropdownIcon.addEventListener('click', toggleMenuDisplay);
         dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected)); 
+        const btn_last_week = document.querySelector("#btn-semana-pasada");
+        const btn_next_week = document.querySelector("#btn-semana-siguiente");
+
+        btn_last_week.addEventListener("click", showPreviousWeek);
+        btn_next_week.addEventListener("click", showNextWeek);
+
+        const btn_actual_week = document.querySelectorAll(".boton_volver_semana_actual");
+        btn_actual_week.forEach(btn => btn.addEventListener("click", showActualWeek));
     }
     
     if (currentPage == "reserva-1.html") {
@@ -115,4 +123,27 @@ function handleOptionSelected(e){
     else if(e.target.textContent.trim() == "Reservar"){
         btn_reserva.click();
     }
+}
+
+function showPreviousWeek(e) {
+    var previousWeek = document.getElementById("previous-week");
+    previousWeek.style.display = "block";
+    var actualWeek = document.getElementById("actual-week");
+    actualWeek.style.display = "none";
+}
+
+function showNextWeek(e) {
+    var actualWeek = document.getElementById("actual-week");
+    actualWeek.style.display = "none";
+    var nextWeek = document.getElementById("next-week");
+    nextWeek.style.display = "block";
+}
+
+function showActualWeek(e) {
+    var previousWeek = document.getElementById("previous-week");
+    previousWeek.style.display = "none";
+    var nextWeek = document.getElementById("next-week");
+    nextWeek.style.display = "none";
+    var actualWeek = document.getElementById("actual-week");
+    actualWeek.style.display = "block";
 }
