@@ -1,5 +1,5 @@
 
-const codPostal = 28013  // codigo postal del restaurante
+const codPostal = 28420  // codigo postal del restaurante
 const currentPage = window.location.pathname.split('/').pop();
 
 // Variable que cuenta el n de validaciones correctas, si es igual a 5, se guarda en localStorage
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (currentPage == "a-domicilio-1.html") {
         document.getElementById("buscarDir").addEventListener("click", function() {
             var direccionInput = document.getElementById("direccionInput").value;
-            var regexDireccion = /^Madrid, Calle [A-Za-záéíóúüñÁÉÍÓÚÜÑ]+, \d+$/;
+            var regexDireccion = /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ]+, [A-Za-záéíóúüñÁÉÍÓÚÜÑ]+, \d+$/;
             const txtError = document.querySelector(".txtError");
 
             if (regexDireccion.test(direccionInput) == false){
