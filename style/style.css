@@ -496,6 +496,13 @@ footer{
     padding: 0;
 }
 
+.textError{
+    display: none;
+    font-size: 1rem;
+    color: red;
+
+}
+
 .btns_atras_y_otros{
     display: block;
     height: fit-content;
@@ -536,9 +543,6 @@ footer{
 .payment-form input{
     width: 85%;
 }
-
-
-
 
 .input{
     display: flex;
