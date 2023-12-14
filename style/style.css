@@ -581,6 +581,10 @@ footer{
     cursor: pointer;
 }
 
+.btn_otros_menus{
+    padding: 8%;
+}
+
 .menu-btn-container .btn_otros_menus, .boton_volver_semana_actual{
     color: #e8e6e3;
     text-decoration: underline;
