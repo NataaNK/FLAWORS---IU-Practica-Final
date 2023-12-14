@@ -15,4 +15,90 @@
     .dish-image img{
         max-width: 45vw; 
     }
+    p {
+        font-size: 1.7rem;
+    }
+
+    .buttons-container {
+        visibility: hidden;
+    }
+    .hamburger-menu {
+        /*  FIXME IMPLEMENTAR*/
+        visibility: visible;
+    }
+    .videos-container img{
+        display: none;
+    }
+    .videos-container video {
+        width: 100%;
+    }
+    .text-section{
+        flex-direction: column;
+    }
+    .section-title-container{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .section-title-container img{
+        height: 20vh;
+    }
+    .text-container{
+        width: 100%;
+    }
+    .menu-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .menu-header h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .dish-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .dish-description{
+        grid-row: 1;
+    }
+    .dish-description canvas{
+        display: none;
+    }
+    .dish-image{
+        grid-row: 2;
+    }
+    .menu-btn-container{
+        width: 100%;
+        grid-template-columns: max-content;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+
+    footer{
+        min-height: 0vh;
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    }
+    .footer-refs{
+        flex-direction: row;
+        grid-row: 1;
+        grid-column: span 2;
+        justify-content: space-between;
+    }
+    .footer-refs a{
+        flex-grow: 1;
+    }
+
+    .footer-img{
+        grid-row: 3;
+        height: 10vh;
+    }
+    .footer-img img{
+        height: 10vh;
+    }
+    .footer-text{
+        grid-row: 2;
+    }
 }
