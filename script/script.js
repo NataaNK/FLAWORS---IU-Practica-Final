@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (pagar) {
         pagar.addEventListener("click", function() {
-            if(validarInputs()) {
+            if(validarInputsPago()) {
             window.location.href = "pago-exito.html";
             }
         });
@@ -117,12 +117,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 
-function validarInputs() {
-    const nombre = document.getElementById("nombre").value.trim();
-    const numero = document.getElementById("numero").value.replace(/ /g, '');
-    const mes = document.getElementById("mes").value.trim();
-    const ano = document.getElementById("ano").value.trim();
-    const cvv = document.getElementById("cvv").value.trim();
+function validarInputsPago() {
+    const nombre = document.getElementById("nombre");
+    const numero = document.getElementById("numero");
+    const mes = document.getElementById("mes");
+    const ano = document.getElementById("ano");
+    const cvv = document.getElementById("cvv");
 
     const nombreError = document.getElementById("nameErrMsg");
     const numeroError = document.getElementById("numErrMsg");
@@ -136,50 +136,35 @@ function validarInputs() {
     const regexAno = /^[0-9]{4}$/;
     const regexCvv = /^[0-9]{3}$/;
 
-    if (regexNombre.test(nombre)) {
+    if (regexNombre.test(nombre.value.trim())) {
         counter++;
     } else {
-        nombreError.style.display = "inline";
-        nombreError.textContent = "Nombre inválido";
-        nombreError.style.fontSize = "1rem";
-        nombreError.style.marginBottom = "10px";
-        nombreError.style.color = "red";
+        nombreError.style.display = "flex";
+        nombreError.style.width = "5%";
     }
-    if (regexNumero.test(numero)) {
+    if (regexNumero.test(numero.value.replace(/ /g, ''))) {
         counter++;
     } else {
-        numeroError.style.display = "inline";
-        numeroError.textContent = "Número inválido";
-        numeroError.style.fontSize = "1rem";
-        numeroError.style.marginBottom = "10px";
-        numeroError.style.color = "red";
+        numeroError.style.display = "flex";
+        numeroError.style.width = "5%";
     }
-    if (regexMes.test(mes)) {
+    if (regexMes.test(mes.value.trim())) {
         counter++;
     } else {
-        mesError.style.display = "inline";
-        mesError.textContent = "Mes inválido";
-        mesError.style.fontSize = "1rem";
-        mesError.style.marginBottom = "10px";
-        mesError.style.color = "red";
+        mesError.style.display = "flex";
+        mesError.style.width = "5%";
     }
-    if (regexAno.test(ano)) {
+    if (regexAno.test(ano.value.trim())) {
         counter++;
     } else {
-        anoError.style.display = "inline";
-        anoError.textContent = "Año inválido";
-        anoError.style.fontSize = "1rem";
-        anoError.style.marginBottom = "1px";
-        anoError.style.color = "red";
+        anoError.style.display = "flex";
+        anoError.style.width = "5%";
     }
-    if (regexCvv.test(cvv)) {
+    if (regexCvv.test(cvv.value.trim())) {
         counter++;
     } else {
-        cvvError.style.display = "inline";
-        cvvError.textContent = "CVV inválido";
-        cvvError.style.fontSize = "1rem";
-        cvvError.style.marginBottom = "1rem";
-        cvvError.style.color = "red";
+        cvvError.style.display = "flex";
+        cvvError.style.width = "5%";
     }
     if (counter == 5) {
         return true;

@@ -146,5 +146,10 @@
     #confirmar-reserva{
         width: fit-content;
     }
+    #numErrMsg,
+    #monthErrMsg,
+    #yearErrMsg{
+        margin-top: 25px;
+    }
 
 }
