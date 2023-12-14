@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 // Variable para almacenar las reservas
-var reservas = [];
+// Cambiar a obtener las reservas desde el localStorage
+var reservas = obtenerReservasDesdeLocalStorage();
 
 // Función para manejar el evento de confirmar reserva
 function confirmarReserva() {
@@ -120,6 +121,9 @@ function confirmarReserva() {
     } else {
         // Agregar la reserva a la lista
         reservas.push({ fecha: fecha, hora: hora });
+
+        // Guardar las reservas en el localStorage
+        guardarReservasEnLocalStorage(reservas);
 
         // Mensaje de éxito
         window.location.href = "reserva-exito.html";
@@ -140,6 +144,18 @@ function existeLimiteReservas(fecha, hora) {
     // Verificar si se supera el límite de 10 reservas
     return contadorReservas >= 10;
 }
+
+// Función para obtener las reservas desde el localStorage
+function obtenerReservasDesdeLocalStorage() {
+    var reservasGuardadas = localStorage.getItem('reservas');
+    return reservasGuardadas ? JSON.parse(reservasGuardadas) : [];
+}
+
+// Función para guardar las reservas en el localStorage
+function guardarReservasEnLocalStorage(reservas) {
+    localStorage.setItem('reservas', JSON.stringify(reservas));
+}
+
 
 // Desplegar menu de hamburguesa
 function toggleClass(elem,className){
