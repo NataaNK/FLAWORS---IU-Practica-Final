@@ -108,4 +108,43 @@
         justify-content: center;
         align-items: center;
     }
+    .btns_atras_y_otros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btns_atras_y_otros #buscarDir{
+        margin: 5%;
+    }
+    .main-displayer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cantidades{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .error-msg-container{
+        min-height: 50vh;
+        height: fit-content;
+    }  
+    .fecha-hora{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .fecha{
+        margin: 0;
+    }
+    .hora{
+        margin: 0;
+    }
+    #confirmar-reserva{
+        width: fit-content;
+    }
+
 }
