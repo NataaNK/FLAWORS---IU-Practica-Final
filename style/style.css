@@ -496,11 +496,10 @@ footer{
     padding: 0;
 }
 
-.textError{
+.txtError{
     display: none;
     font-size: 1rem;
     color: red;
-
 }
 
 .btns_atras_y_otros{

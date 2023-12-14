@@ -13,13 +13,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (currentPage == "a-domicilio-1.html") {
         document.getElementById("buscarDir").addEventListener("click", function() {
-            var postalCode = document.getElementById("postalCodeInput").value;
-            if (postalCode == codPostal) {
-                window.location.href = "a-domicilio-2.html";
-            } else {
-                window.location.href = "error-a-domicilio.html";
+            var direccionInput = document.getElementById("direccionInput").value;
+            var regexDireccion = /^Madrid, Calle [A-Za-záéíóúüñÁÉÍÓÚÜÑ]+, \d+$/;
+            const txtError = document.querySelector(".txtError");
+
+            if (regexDireccion.test(direccionInput) == false){
+                txtError.style.display = "flex";
             }
-        
+            else{
+                var postalCode = document.getElementById("postalCodeInput").value;
+                if (postalCode == codPostal) {
+                    window.location.href = "a-domicilio-2.html";
+                } else {
+                    window.location.href = "error-a-domicilio.html";
+                }
+            }
         });
     }
 
