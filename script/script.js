@@ -262,12 +262,13 @@ function toggleMenuDisplay(e){
 function handleOptionSelected(e){
 	toggleClass(e.target.parentNode, 'hide');	
 
+
     // Simulamos un click en el menú de ordenador para poder
     // reutilizar el comportamiento
-    if(e.target.textContent.trim() == "Pedido"){
+    if(e.target.id == "option1"){
         btn_domicilio.click();
     }
-    else if(e.target.textContent.trim() == "Reservar"){
+    else if(e.target.id == "option2"){
         btn_reserva.click();
     }
 }
