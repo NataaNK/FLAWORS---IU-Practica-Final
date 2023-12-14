@@ -93,5 +93,23 @@
     .footer-refs a{
         font-size: 5vw;
     }
+    .menu-section{
+        justify-content: center;
+    }
+    .country-container h3{
+        font-size: 15vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-btn-container{
+        width: auto;
+    }
+    .menu-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
 
 }
