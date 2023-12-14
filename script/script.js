@@ -142,7 +142,7 @@ function existeLimiteReservas(fecha, hora) {
     }
 
     // Verificar si se supera el límite de 10 reservas
-    return contadorReservas >= 10;
+    return contadorReservas >= 2;
 }
 
 // Función para obtener las reservas desde el localStorage
