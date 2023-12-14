@@ -70,9 +70,7 @@
         grid-row: 2;
     }
     .menu-btn-container{
-        width: 100%;
-        grid-template-columns: max-content;
-        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+        width: auto;
     }
 
     footer{
@@ -100,5 +98,14 @@
     }
     .footer-text{
         grid-row: 2;
+    }
+    .menu-section{
+        justify-content: center;
+    }
+    .country-container h3{
+        font-size: 15vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
