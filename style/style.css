@@ -513,15 +513,19 @@ footer{
     float: left;
 }
 
-.btns_atras_y_otros #pagar{
+.btns_atras_y_otros #pagar,
+.btns_atras_y_otros #confirmar-reserva{
     float: right;
     margin-right: 6%;
 }
 
-.btns_atras_y_otros #back_pagar{
+.btns_atras_y_otros #back_pagar,
+.btns_atras_y_otros #back-reserva{
     float: left;
     margin-left: 6%;
 }
+
+
 
 .btns_atras_y_otros #back_faq,
 .btns_atras_y_otros #back_pp
@@ -611,7 +615,8 @@ footer{
 }
 
 .error-msg-container{
-    height: 50vh;
+    height: fit-content;
+    min-height: 50vh;
     background: #181a1b;
     border-radius: 10px;
     margin: 0% 10% 10% 10%;
