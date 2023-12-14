@@ -35,7 +35,7 @@ h3{
 }
 h4{
     font-family: 'Italiana', serif;
-    font-size: 3rem;
+    font-size: 3vh;
     margin: 1rem;
     font-weight: normal;
     color: white;
@@ -413,30 +413,23 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: fit-content;
 }
 
 .text_container_faq_pp p{
     margin: 3%;
+    font-size: 2vh;
 }
 
 .background_2_faq{
     background: linear-gradient(160deg,#B136C5 0%,#A73030 40%, #B06002 70%, #A73030 90%);
     width: 85%;
-    height: 90vh;
+    height: 80vh;
     border-radius: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: auto;
-}
-
-#back_faq{
-    margin: 0.5%;
-    border-color: #9167A0;
-    top: 17%;
-    bottom: 17%;
-    padding: 20px;
-    width:10%;
 }
 
 /*---------Estilo a-domicilio---------*/
@@ -447,6 +440,7 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+
 .background_1 h1{
     font-size: 2rem;
     font-weight: normal;
@@ -502,9 +496,47 @@ footer{
     padding: 0;
 }
 
+.btns_atras_y_otros{
+    display: block;
+    height: fit-content;
+    width: 100%;
+}
+
+.btns_atras_y_otros #buscarDir{
+    float: right;
+    margin: 0;
+}
+
+.btns_atras_y_otros #back{
+    width: 45%;
+    margin: 0;
+    float: left;
+}
+
+.btns_atras_y_otros #pagar{
+    float: right;
+    margin-right: 6%;
+}
+
+.btns_atras_y_otros #back_pagar{
+    float: left;
+    margin-left: 6%;
+}
+
+.btns_atras_y_otros{
+    margin-left: 15%;
+}
+
+.payment-form input{
+    width: 85%;
+}
+
+
+
+
 .input{
     display: flex;
-    width: 100%;
+    width: auto;
     padding: 18px;
     margin-bottom: 10px;
     background-color: #181a1b;
@@ -695,7 +727,6 @@ footer{
 /*---------Estilo de pago---------*/
 
 .payment-form{
-    margin: 0px 36px 0px 0px;
     flex:1;
 }
 
@@ -773,112 +804,4 @@ footer{
 
 #confirmar-reserva{
     margin-left: 4%;
-}
-
-
-
-
-
-
-
-
-/*---------Estilo de movil---------*/
-
-@media (max-width: 500px) {
-    p {
-        font-size: 1.7rem;
-    }
-
-
-    .buttons-container {
-        visibility: hidden;
-    }
-    .hamburger-menu {
-        /*  FIXME IMPLEMENTAR*/
-        visibility: visible;
-    }
-    .videos-container img{
-        display: none;
-    }
-    .videos-container video {
-        width: 100%;
-    }
-    .text-section{
-        flex-direction: column;
-    }
-    .section-title-container{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .section-title-container img{
-        height: 20vh;
-    }
-    .text-container{
-        width: 100%;
-    }
-    .menu-header{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-    }
-    .menu-header h2{
-        text-align: center;
-        font-size: 3rem;
-    }
-    .dish-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
-    }
-    .dish-description{
-        grid-row: 1;
-    }
-    .dish-description canvas{
-        display: none;
-    }
-    .dish-image{
-        grid-row: 2;
-    }
-    .menu-btn-container{
-        width: 100%;
-        grid-template-columns: max-content;
-        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
-    }
-
-    .btn2{
-        height: 5vh;
-        width: 100%;
-        background: linear-gradient(90deg,#841296 0%, #a119b6 20%, #922020 75%);
-        border: 3px solid #181a1b;
-        font-size: 1.2rem;
-    }
-    footer{
-        min-height: 0vh;
-        height: fit-content;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
-    }
-    .footer-refs{
-        flex-direction: row;
-        grid-row: 1;
-        grid-column: span 2;
-        justify-content: space-between;
-    }
-    .footer-refs a{
-        flex-grow: 1;
-    }
-
-    .footer-img{
-        grid-row: 3;
-        height: 10vh;
-    }
-    .footer-img img{
-        height: 10vh;
-    }
-    .footer-text{
-        grid-row: 2;
-    }
-    
-
 }
