@@ -7,7 +7,6 @@ body{
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     background: #252323;
-
 }
 
 h1 {
@@ -50,12 +49,11 @@ p{
     font-weight: normal;
     color: white;
     text-decoration: none;
-
 }
+
 img{
     border-radius: 20px;
 }
-
 
 /*---------Primera sección (home)---------*/
 
@@ -356,6 +354,7 @@ footer{
     grid-column: span 2; /* Hace que el elemento ocupe dos columnas */
     
 }
+
 .footer-refs a{
     font-size: max(1.3rem, 4vh);
     font-weight: normal;
@@ -394,7 +393,6 @@ footer{
     font-weight: normal;
     text-decoration: none;
     color: white;
-    margin: 0.5rem;
     text-align: center;
 }
 
@@ -523,8 +521,10 @@ footer{
     margin-left: 6%;
 }
 
-.btns_atras_y_otros{
-    margin-left: 15%;
+.btns_atras_y_otros #back_faq,
+.btns_atras_y_otros #back_pp
+{
+    margin-left: 7%;
 }
 
 .payment-form input{
