@@ -211,6 +211,7 @@ img{
     padding-left: 7%;
     padding-right: 7%;
 }
+
 .text-container{
     display: flex;
     flex-direction: column;
@@ -247,6 +248,7 @@ img{
     width: auto;
 }
 
+
 .menu-section h2{
     text-align: center;
 }
@@ -275,8 +277,8 @@ img{
     background-clip: text;/* añadido por compatibilidad */
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
-    /* TODO FIXME: no se como hacer que se mantenga el underline*/
 }
+
 .dish-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
