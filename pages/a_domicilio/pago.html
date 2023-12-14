@@ -35,26 +35,31 @@
                             <div class="nombre">
                                 <label for="nombre">Nombre</label>
                                 <input class="input" type="text" id="nombre" placeholder="Nombre del titular">
+                                <p id="nameErrMsg" class="error-message"></p>
                             </div>
                             <div class="numero">
                                 <label for="numero">Número de tarjeta</label>
                                 <input class="input" type="text" id="numero" placeholder="Número de tarjeta">
+                                <p id="numErrMsg" class="error-message"></p>
                             </div>
                         </div>
                         <div class="fecha-cvv">
                             <div class="mes">
                                 <label for="fecha">Mes de expiración</label>
-                                <input class="input" type="text" id="fecha" placeholder="MM">
+                                <input class="input" type="text" id="mes" placeholder="MM">
+                                <p id="monthErrMsg" class="error-message"></p>
                             </div>
                             <div class="año">
                                 <label for="año">Año de expiración</label>
-                                <input class="input" type="text" id="cvv" placeholder="AA">
+                                <input class="input" type="text" id="ano" placeholder="AA">
+                                <p id="yearErrMsg" class="error-message"></p>
                             </div>
                         </div>
                         <div class="cvv-container">
                             <div class="cvv">
                                 <label for="cvv">CVV</label>
                                 <input class="input" type="text" id="cvv" placeholder="CVV">
+                                <p id="cvvErrMsg" class="error-message"></p>
                             </div>
                             <img src="../../media/img/cvv.png" alt="cvv">
                         </div>

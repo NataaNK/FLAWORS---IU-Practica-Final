@@ -2,6 +2,9 @@
 const codPostal = 28013  // codigo postal del restaurante
 const currentPage = window.location.pathname.split('/').pop();
 
+// Variable que cuenta el n de validaciones correctas, si es igual a 5, se guarda en localStorage
+var counter = 0;
+
 document.addEventListener("DOMContentLoaded", function (event) {
     load_tlib();
     
@@ -101,9 +104,90 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const btn_confirmar = document.getElementById('confirmar-reserva');
         btn_confirmar.addEventListener('click', confirmarReserva);
     }
+
+    const pagar = document.getElementById("pagar");
+
+    if (pagar) {
+        pagar.addEventListener("click", function() {
+            if(validarInputs()) {
+            window.location.href = "pago-exito.html";
+            }
+        });
+
+    }
 });
 
+function validarInputs() {
+    const nombre = document.getElementById("nombre").value.trim();
+    const numero = document.getElementById("numero").value.replace(/ /g, '');
+    const mes = document.getElementById("mes").value.trim();
+    const ano = document.getElementById("ano").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
 
+    const nombreError = document.getElementById("nameErrMsg");
+    const numeroError = document.getElementById("numErrMsg");
+    const mesError = document.getElementById("monthErrMsg");
+    const anoError = document.getElementById("yearErrMsg");
+    const cvvError = document.getElementById("cvvErrMsg");
+
+    const regexNombre = /^[a-zA-Z ]{2,30}$/;
+    const regexNumero = /^[0-9]{16}$/;
+    const regexMes = /^[0-9]{2}$/;
+    const regexAno = /^[0-9]{4}$/;
+    const regexCvv = /^[0-9]{3}$/;
+
+    if (regexNombre.test(nombre)) {
+        counter++;
+    } else {
+        nombreError.style.display = "inline";
+        nombreError.textContent = "Nombre inválido";
+        nombreError.style.fontSize = "1rem";
+        nombreError.style.marginBottom = "10px";
+        nombreError.style.color = "red";
+    }
+    if (regexNumero.test(numero)) {
+        counter++;
+    } else {
+        numeroError.style.display = "inline";
+        numeroError.textContent = "Número inválido";
+        numeroError.style.fontSize = "1rem";
+        numeroError.style.marginBottom = "10px";
+        numeroError.style.color = "red";
+    }
+    if (regexMes.test(mes)) {
+        counter++;
+    } else {
+        mesError.style.display = "inline";
+        mesError.textContent = "Mes inválido";
+        mesError.style.fontSize = "1rem";
+        mesError.style.marginBottom = "10px";
+        mesError.style.color = "red";
+    }
+    if (regexAno.test(ano)) {
+        counter++;
+    } else {
+        anoError.style.display = "inline";
+        anoError.textContent = "Año inválido";
+        anoError.style.fontSize = "1rem";
+        anoError.style.marginBottom = "1px";
+        anoError.style.color = "red";
+    }
+    if (regexCvv.test(cvv)) {
+        counter++;
+    } else {
+        cvvError.style.display = "inline";
+        cvvError.textContent = "CVV inválido";
+        cvvError.style.fontSize = "1rem";
+        cvvError.style.marginBottom = "1rem";
+        cvvError.style.color = "red";
+    }
+    if (counter == 5) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
 
 // Variable para almacenar las reservas
 // Cambiar a obtener las reservas desde el localStorage
